@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Will Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onpageshow="myfun()">
+<header class="header">
+   <div class="header-bar">
+    <div class="title">My Will</div>
+    </div>
+    <div class="sub-header">
+        <div class="greeting">Good morning,Vinoth!</div>
+        <div class="date">Today is 10 November 2024</div>
+        <div class="sub-icon">
+            <input type="text" placeholder="search" onfocus="myfun1(this)">
+           
+            <img width="32" height="32" src="image/notification.png" alt="appointment-reminders"/>
+            <img width="32" height="32" src="image/setting.png" alt="settings"/>
+            <img width="32" height="32" src="image/right.jpeg" alt="move-right--v3"/>
+    
+        </div>
+    </div>
+   
+</header> 
+<!---------------------------------main content------------------------------------------------->  
+<main class="main-container">
+<div class="left-panel">
+    <div class="card">
+     <img src="image/men1.jpeg" width="150px" height="130px">
+     <div class="Ethan">
+      <h2>Ethan Will</h2>
+      <p><strong>Date of Creaction:</strong>04/12/1988</p>
+      <p><strong>Status:</strong>Complete</p>
+      <h3>$ 2.5 Lakhs</h3>
+      <p>Worth assets today</p>
+      </div>
+      <div class="Status">
+        <div class="row-1">10<br><span>Active Assets</span></div>
+        <div class="row-2">3<br><span>Active Liabilities</span></div>
+        <div class="row-3">15<br><span>Active Beneficiaries</span></div>
+        <div class="row-4">3<br><span>Active Signatories</span></div>
+        </div>
+        <button class="btn btn-primary"><a href="index (2).html">Add New Asset</a></button><br>
+        <button class="btn btn-secondary" id="clickbutton" onclick="myfun2()">Update Asset Value</button>
+     </div>
+    </div>
+ <div class="right-panel">
+    <div class="card">
+      <h2>Signatory Will</h2>
+      <div class="Status">
+        <div class="col-1"><img src="image/men2.jpeg" width="70px" height="70px"><br>Liam<br><span>witness<br>Date:28.04.2013<br>Status:compkete</span></div>
+        <div class="col-2"><img src="image/men2.jpeg" width="70px" height="70px"><br>Liam<br><span>witness<br>Date:28.04.2013<br>Status:compkete</span></div>
+        <div class="col-3"><img src="image/men2.jpeg" width="70px" height="70px"><br>Liam<br><span>witness<br>Date:28.04.2013<br>Status:compkete</span></div>
+        </div>
+        <button class="btn btn-thired" id="clickbutton" onclick="myfun2()">View Invitation</button> 
+    </div> 
+</div>
+</main> 
+<script>
+    function myfun(){
+        alert("Page is Loading...")
+    }
+    function myfun1(obj){
+      obj.style.color="blue"
+      
+    }
+    function myfun2(){
+       const button=document.getElementById("clickbutton");
+        {
+            alert("Button Was Clicked!")
+        }
+
+    }
+</script> 
+</body>
+</html>

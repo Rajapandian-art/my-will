@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Will</title>
+    <link rel="stylesheet" href="style (2).css">
+</head>
+<body>
+    <div class="container">
+        <div class="side_bar">
+            <img src="image/men1.jpeg" width="150px" height="150px">
+            <p><strong>D.O.C:</strong>28.04.2023</p>
+            <p><strong>Status:</strong>Complete</p>
+            <button type="submit" class="bar_btn"><a href="index.html" >Back Home</a></button>
+        </div>
+        <div class="btn-col">
+            <button class="btn-col1">ADD Beneficiaries</button>
+            <button class="btn-col2">ADD Asset</button>
+            <button class="btn-col3">ADD Liability</button>
+            <button class="btn-col4">CREATE Links</button>
+            <button class="btn-col5">ADD Signatures</button>
+            <button class="btn-col6">Will Signatures</button>
+        </div>
+        <table class="style-table" id="dataTable"> 
+            <thead>  
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Relationship</th>
+                <th>Date of Birth</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Vaishnavi</td>
+                    <td>sister</td>
+                    <td>05.6.1998</td>
+                    <td>active</td>
+                    <td><input type="submit" class="btn-info" value="Edit"><input type="submit" class="btn-info" value="Delete"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Vaishnavi</td>
+                    <td>sister</td>
+                    <td>04.10.1988</td>
+                    <td>Inactive</td>
+                    <td><input type="submit" class="btn-info" value="Edit"><input type="submit" class="btn-info" value="Delete"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ramya</td>
+                    <td>sister</td>
+                    <td>14.07.2005</td>
+                    <td>Active</td>
+                    <td><input type="submit" class="btn-info" value="Edit"><input type="submit" class="btn-info" value="Delete"></td>
+                </tr>
+                
+            </tbody>
+          </table>
+          <div class="Addnew" id="dataForm">
+            <h2>Add New Beneficiary</h2>
+            <label>S.No</label><br>
+            <input type="number" id="number"  placeholder="Enter the S.No:"><br>
+            <label>First Name</label><br>
+            <input type="text" id="name" placeholder="Enter the First name"><br>
+             <label>Relationship</label><br>
+             <input type="text" id="Relation"  placeholder="Enter the Relationship"><br>
+             <label>Date of Birth</label><br>
+             <input type="date" id="Date_of_birth" placeholder="Enter the date of Birth"><br>
+             <button  class="btn-add" onclick="addRow()">Add Beneficiary</button>
+        </div>
+    </div>
+  
+    <script>
+        function addRow(){
+            const number=document.getElementById("number").value;
+            const name=document.getElementById("name").value;
+            const Relation=document.getElementById("Relation").value;
+           
+           
+
+        if(number===''||name===''||Relation==='')
+        {
+        alert('Please fill all fields!');
+        return;
+        }
+        const table=document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+        const newRow=table.insertRow();
+        const numberCell=newRow.insertCell(0);
+        const nameCell=newRow.insertCell(1);
+        const RelationCell=newRow.insertCell(2);
+        
+      
+       
+        numberCell.textContent=number;
+        nameCell.textContent=name;
+        RelationCell.textContent=Relation;
+       
+
+        
+        document.getElementById('dataForm').reset();
+        }
+    </script>
+</body>
+</html>
